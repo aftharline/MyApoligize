@@ -48,10 +48,15 @@
     </div>
 
     <!-- asking -->
-     <div class="d-flex justify-content-center mt-3 mb-5">
-    <button class="btn maafin text-light mx-3" id="maafinButton">MAAFIN <i class="fa-solid fa-heart"></i></button>
-    <button class="btn gamau mx-3" id="gamauButton">GAMAU <i class="fa-solid fa-heart-crack"></i></button>
-     </div>
+    <div class="d-flex justify-content-center mt-3">
+    <button class="btn maafin text-light mx-2" id="maafinButton">MAAFIN <i class="fa-solid fa-heart"></i></button>
+    <button class="btn gamau mx-2" id="gamauButton">GAMAU <i class="fa-solid fa-heart-crack"></i></button>
+    </div>
+    <div class="d-flex justify-content-center">
+    <div class="d-grid mb-5 mt-3" style="width: 270px;">
+    <a href="https://wa.me/+6285707109853" class="btn wa text-dark mx-3" target="_blank"><!--<i class="fa-solid fa-heart-crack"></i> &nbsp; --> <img src="wa.png" alt="" style="width: 15px;" class="pb-1"> HUBUNGI PACAR</a>
+    </div>
+    </div>
 
          <!-- Footer -->
     <div class="d-flex justify-content-center align-items-center shadow-lg text-light" id="footer">
@@ -60,25 +65,30 @@
 
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script>
-        document.getElementById('gamauButton').addEventListener('click', function() {
-            // Get the button's dimensions
-            const button = this;
-            const buttonWidth = button.offsetWidth;
-            const buttonHeight = button.offsetHeight;
+document.getElementById('gamauButton').addEventListener('click', function() {
+    // Get the button's dimensions
+    const button = this;
+    const buttonWidth = button.offsetWidth;
+    const buttonHeight = button.offsetHeight;
 
-            // Get the viewport dimensions
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
+    // Get the viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
-            // Calculate random positions
-            const randomX = Math.random() * (viewportWidth - buttonWidth);
-            const randomY = Math.random() * (viewportHeight - buttonHeight);
+    // Calculate random positions, ensuring the button stays within the viewport
+    const randomX = Math.random() * (viewportWidth - buttonWidth);
+    const randomY = Math.random() * (viewportHeight - buttonHeight);
 
-            // Set the new position
-            button.style.position = 'absolute';
-            button.style.left = randomX + 'px';
-            button.style.top = randomY + 'px';
-        });
+    // Set the new position
+    button.style.position = 'absolute';
+    button.style.left = randomX + 'px';
+    button.style.top = randomY + 'px';
+
+    // Optional: Move the button back to its original position after a delay
+    setTimeout(() => {
+        button.style.position = 'static'; // Reset to default positioning
+    }, 4000); // Change 2000 to the desired delay in milliseconds
+});
 
         document.getElementById('maafinButton').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default anchor behavior

@@ -36,7 +36,7 @@ nav {
 }
 
 .maafin:hover {
-    background-color: rgb(183, 89, 157);
+    background-color: rgb(203, 99, 174);
 }
 
 .gamau {
@@ -45,8 +45,16 @@ nav {
 }
 
 .gamau:hover {
-    background-color: rgba(255, 255, 255, 0);
-    color: rgba(240, 255, 255, 0);
+    background-color: rgb(255, 84, 84);
+    /* color: rgba(240, 255, 255, 0); */
+}
+
+.wa {
+    background-color: rgb(90, 227, 90);
+}
+
+.wa:hover {
+    background-color: rgb(81, 205, 81);
 }
 
 #footer {
