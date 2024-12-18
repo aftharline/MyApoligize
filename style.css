@@ -1,0 +1,60 @@
+body, h1, h2, h3, h4, h5, p, label {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+#title1 {
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+header {
+    height: 70px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgb(227, 108, 193); /* Change this to your desired background color */
+}
+nav {
+    margin-top: 70px; /* Adjust this based on the height of your header */
+}
+
+nav {
+    height: 30px;
+    background-color: rgb(251, 241, 108);
+}
+
+.maafin, .gamau {
+    position: relative;
+}
+
+.maafin {
+    background-color: rgb(227, 108, 193);
+}
+
+.maafin:hover {
+    background-color: rgb(183, 89, 157);
+}
+
+.gamau {
+    background-color: rgb(255, 84, 84);
+    z-index: 1000;
+}
+
+.gamau:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(240, 255, 255, 0);
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(227, 108, 193);
+    text-align: center;
+  }

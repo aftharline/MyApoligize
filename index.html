@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Apologize</title>
+    <link rel="icon" href="love.svg" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Poppins and Montserrat Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+  <body class="bg-light">
+
+    <!-- header -->
+    <header class=" d-flex align-items-center justify-content-center text-light">
+        <h1 id="title1" style="letter-spacing: 2px; font-size: 25pt;" class="text-uppercase">HAI SAYANG</h1>&nbsp;<h2><i class="fa-regular fa-heart"></i></h2>
+    </header>
+
+    <nav class="d-flex align-items-center justify-content-center text-uppercase shadow">
+    <marquee behavior="" direction="">
+        <i class="fa-regular fa-heart"></i> <label>udah ya marahnya sayang, maafin aku. aku sedih kalau sayang marah</label> <i class="fa-regular fa-heart"></i>
+    </marquee>
+    </nav>
+
+    <!-- content -->
+    <div class="d-flex justify-content-center">
+    <div class="card text-bg-light mt-4 shadow" style="width: 80%;">
+        <div class="card-header d-flex justify-content-center">
+            <audio controls="true">
+                <source src="komang.mp3">
+            </audio>
+        </div>
+        <div class="card-body">
+            <p class="text-center m-2">Maafkan aku, kekasihku, yang telah hilang dalam sejenak waktu yang membingungkan. Seperti angin yang tiba-tiba menghilang di balik kabut, aku tersesat dalam kegelisahan yang tak terucapkan. <br><br>Namun, jangan biarkan jarak itu merenggangkan hati kita, karena aku kembali, dengan segala penyesalan, untuk menemukanmu lagi di pelukan cinta yang tak pernah pudar.</p>
+            <p class="text-center m-2 mt-4" style="font-size: 10pt;"><i>- Muhammad Abdee Nur Fatih -</i></p>
+        </div>
+    </div>
+    </div>
+
+    <!-- asking -->
+     <div class="d-flex justify-content-center mt-3 mb-5">
+    <button class="btn maafin text-light mx-3" id="maafinButton">MAAFIN <i class="fa-solid fa-heart"></i></button>
+    <button class="btn gamau mx-3" id="gamauButton">GAMAU <i class="fa-solid fa-heart-crack"></i></button>
+     </div>
+
+         <!-- Footer -->
+    <div class="d-flex justify-content-center align-items-center shadow-lg text-light" id="footer">
+        <label for="footer" class="py-1" style="letter-spacing: .5px;">Made with <i class="fa-regular fa-heart"></i></label>
+    </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script>
+        document.getElementById('gamauButton').addEventListener('click', function() {
+            // Get the button's dimensions
+            const button = this;
+            const buttonWidth = button.offsetWidth;
+            const buttonHeight = button.offsetHeight;
+
+            // Get the viewport dimensions
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // Calculate random positions
+            const randomX = Math.random() * (viewportWidth - buttonWidth);
+            const randomY = Math.random() * (viewportHeight - buttonHeight);
+
+            // Set the new position
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        });
+
+        document.getElementById('maafinButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            Swal.fire({
+                title: 'I Love You So Much',
+                text: 'Terimakasih cintaku sayangku cintaku duniaku <3',
+                icon: 'success'
+                // showCancelButton: true,
+                // confirmButtonText: 'Ya, aku memaafkan',
+                // cancelButtonText: 'Tidak, aku belum siap'
+            });
+            // .then((result) => {
+            //     if (result.isConfirmed) {
+            //         Swal.fire('Terima kasih!', 'Aku sangat menghargainya.', 'success');
+            //     } else if (result.isDismissed) {
+            //         Swal.fire('Baiklah!', 'Aku akan menunggu.', 'info');
+            //     }
+            // });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
